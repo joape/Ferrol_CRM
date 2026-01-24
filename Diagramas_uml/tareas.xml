@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" modified="2025-11-26T19:05:09.456Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="qE9nQ30H8uXFq_e3gS1p" version="24.2.0" type="diagram">
+  <diagram id="g5b_1vA5W0D1W7D2V6X3" name="Clases Tareas y Moneda">
+    <mxGraphModel dx="1245" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-1" value="&lt;u&gt;Tareas&lt;/u&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;fontSize=12;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="220" width="300" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-2" value="&lt;b&gt;Atributos&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-1">
+          <mxGeometry y="26" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-3" value="&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ id: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ fecha: date&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ descripcion: text&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ paga_consignatario: bool&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ monto: float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ moneda_tarea: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ cotizacion_tarea: float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ monto_uyu: float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ imagen: mixed&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-1">
+          <mxGeometry y="46" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-4" value="&lt;b&gt;Operaciones&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-1">
+          <mxGeometry y="156" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-5" value="&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ registrarTarea()&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ eliminarTarea(tarea_id: int)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ calcularTotalConsignatario(tareas: array): float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ calcularTotalAutomotora(tareas: array): float&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ obtenerImagenUrl(imagen_id: mixed): string&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-1">
+          <mxGeometry y="176" width="300" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-6" value="&lt;u&gt;Automovil (Vehiculo)&lt;/u&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;fontSize=12;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-7" value="&lt;b&gt;Atributos&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-6">
+          <mxGeometry y="26" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-8" value="&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ id: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ marca: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ modelo: string&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-6">
+          <mxGeometry y="46" width="250" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-9" value="&lt;u&gt;ConversorMonedaBCU&lt;/u&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;fontSize=12;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="720" y="290" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-10" value="&lt;b&gt;Atributos&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-9">
+          <mxGeometry y="26" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-11" value="&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ cache: array&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-9">
+          <mxGeometry y="46" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-12" value="&lt;b&gt;Operaciones&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-9">
+          <mxGeometry y="66" width="270" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-13" value="&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ obtenerCotizaciones(): array&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ convertirAUYU(monto, moneda, cotizacion): float&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="V7bYkF_gHwV0h6rG_1Cg-9">
+          <mxGeometry y="86" width="270" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-14" value="" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="V7bYkF_gHwV0h6rG_1Cg-6" target="V7bYkF_gHwV0h6rG_1Cg-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="380" as="sourcePoint" />
+            <mxPoint x="400" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-15" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="V7bYkF_gHwV0h6rG_1Cg-14">
+          <mxGeometry x="-0.0963" y="-1" relative="1" as="geometry">
+            <mxPoint x="28" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-16" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="V7bYkF_gHwV0h6rG_1Cg-14">
+          <mxGeometry x="0.1071" y="1" relative="1" as="geometry">
+            <mxPoint x="-29" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-17" value="" style="endArrow=open;dashed=1;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="V7bYkF_gHwV0h6rG_1Cg-1" target="V7bYkF_gHwV0h6rG_1Cg-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="390" as="sourcePoint" />
+            <mxPoint x="770" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7bYkF_gHwV0h6rG_1Cg-18" value="Utiliza" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="V7bYkF_gHwV0h6rG_1Cg-17">
+          <mxGeometry x="0.5" y="0" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

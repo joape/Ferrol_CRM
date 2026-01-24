@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrol | Venta de Automóviles</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1><span class="logo-icon"><i class="fas fa-car-alt"></i></span> Ferrol</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Todos los Autos</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li class="customer-zone-item">
+                    <a href="customer-login.html" class="customer-zone-btn">
+                        <i class="fas fa-user-tie"></i> Zona Clientes
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="search-filters">
+            <h2>🔎 Encuentra tu próximo vehículo en Ferrol</h2>
+            <form class="filter-form">
+                <select name="brand">
+                    <option value="">Marca</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="ford">Ford</option>
+                    <option value="vw">VW</option>
+                </select>
+                <input type="text" name="model" placeholder="Modelo">
+                <select name="price-range">
+                    <option value="">Rango de Precio</option>
+                    <option value="0-10000">0 - 10,000</option>
+                    <option value="10000-20000">10,000 - 20,000</option>
+                </select>
+                <select name="dealer">
+                    <option value="">Automotora</option>
+                    <option value="a">Automotora A</option>
+                    <option value="b">Automotora B</option>
+                </select>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="car-listings">
+            <h3>Resultados de la Búsqueda</h3>
+
+            <article class="car-card">
+                <div class="car-image">
+                    <img src="placeholder-car.jpg" alt="Toyota Corolla 2020">
+                </div>
+                <div class="car-details">
+                    <span class="dealer-tag">Automotora A</span>
+                    <h4>**Toyota Corolla 2020**</h4>
+                    <p>Marca: **Toyota** | Color: **Rojo**</p>
+                    <p>Precio: **$18,500**</p>
+                    <p>Km: **35,000 km** (Usado)</p>
+                    <ul class="features">
+                        <li>✅ Aire Acondicionado</li>
+                        <li>✅ Control Crucero</li>
+                        <li>✅ Sensores de Estacionamiento</li>
+                        </ul>
+                    <a href="#" class="details-btn">Ver Detalles</a>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="car-image">
+                    <img src="placeholder-suv.jpg" alt="Ford Explorer 2025">
+                </div>
+                <div class="car-details">
+                    <span class="dealer-tag">Automotora B</span>
+                    <h4>**Ford Explorer 2025**</h4>
+                    <p>Marca: **Ford** | Color: **Azul**</p>
+                    <p>Precio: **$45,000**</p>
+                    <p>Km: **0 km** (Nuevo)</p>
+                    <ul class="features">
+                        <li>✅ Asientos de Cuero</li>
+                        <li>✅ Techo Panorámico</li>
+                        <li>✅ Sistema de Navegación GPS</li>
+                    </ul>
+                    <a href="#" class="details-btn">Ver Detalles</a>
+                </div>
+            </article>
+            
+            </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Ferrol. Todos los derechos reservados.</p>
+        <p>Hecho con ❤️ en [Tu País/Ciudad]</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+📌 Arquitectura General del Sistema
+Tipo
+
+Aplicación SaaS
+
+Arquitectura monolítica modular
+
+Multi-tenant (shared database, shared schema)
+
+📌 Principios de diseño
+
+Separación por dominios (apps Django)
+
+Dominio rico (lógica en modelos/servicios)
+
+Seguridad desde el diseño (Security by Design)
+
+2FA obligatorio
+
+Aislamiento estricto por tenant (Dealer)
+
+📌 Gestión de Identidad y Acceso
+
+Autenticación basada en Django Auth
+
+Autorización por roles (RBAC)
+
+Segundo factor obligatorio (TOTP)
+
+Códigos de recuperación
+
+Sesiones invalidadas en eventos críticos
+
+📌 Multi-tenancy
+
+Cada usuario pertenece a un Dealer
+
+Cada entidad de negocio referencia un Dealer
+
+Nunca se confía en IDs del frontend
+
+El dealer se obtiene del usuario autenticado
+
+📌 Seguridad
+
+HTTPS obligatorio
+
+Hash seguro de contraseñas
+
+Secrets cifrados
+
+Protección CSRF / XSS
+
+Preparado para auditoría futura
+
+📌 Evolución futura
+
+APIs REST
+
+Mobile App
+
+Microservicios (exchange, notifications)
+
+WhatsApp Business API
+
+Auditoría completa
