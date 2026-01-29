@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Vehículo{% endblock %}
+
+{% block content %}
+
+<h1>{% if view.object %}Editar{% else %}Nuevo{% endif %} vehículo</h1>
+
+<form method="post" class="card p-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="{% url 'dealers:vehicle_list' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Eliminar servicio{% endblock %}
+
+{% block content %}
+
+<h1 class="text-danger">Eliminar servicio</h1>
+
+<p>
+    ¿Seguro que querés eliminar el servicio
+    <strong>{{ object.description }}</strong>
+    del vehículo {{ object.vehicle }}?
+</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="{% url 'dealers:vehicle_service_list' %}" class="btn btn-secondary">
+        Cancelar
+    </a>
+</form>
+
+{% endblock %}

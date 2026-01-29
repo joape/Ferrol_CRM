@@ -1,20 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dealer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="container mt-4">
+{% extends "base.html" %}
 
-<h1>{{ view.object|default:"Nueva Automotora" }}</h1>
+{% block title %}
+    {% if view.object %}
+        Editar automotora
+    {% else %}
+        Nueva automotora
+    {% endif %}
+{% endblock %}
 
-<form method="post">
+{% block content %}
+
+<h1 class="mb-4">
+    {% if view.object %}
+        Editar automotora
+    {% else %}
+        Nueva automotora
+    {% endif %}
+</h1>
+
+<form method="post" class="card p-4">
     {% csrf_token %}
+
     {{ form.as_p }}
 
-    <button type="submit" class="btn btn-success">Guardar</button>
-    <a href="{% url 'dealers:list' %}" class="btn btn-secondary">Cancelar</a>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-success">
+            Guardar
+        </button>
+        <a href="{% url 'dealers:list' %}" class="btn btn-secondary">
+            Cancelar
+        </a>
+    </div>
 </form>
 
-</body>
-</html>
+{% endblock %}
+

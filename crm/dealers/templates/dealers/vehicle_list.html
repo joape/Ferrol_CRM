@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Vehículos{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">Vehículos</h1>
+
+<a href="{% url 'dealers:vehicle_create' %}" class="btn btn-primary mb-3">
+    Nuevo vehículo
+</a>
+
+<table class="table table-bordered table-hover align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Tipo</th>
+            <th>Compra</th>
+            <th>Servicios</th>
+            <th>Costo total</th>
+            <th>Precio sugerido</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for v in vehicles %}
+        <tr>
+            <td>{{ v.brand }}</td>
+            <td>{{ v.model }}</td>
+            <td>{{ v.year }}</td>
+            <td>{{ v.get_ownership_type_display }}</td>
+
+            <td>
+                {{ v.purchase_price }} {{ v.currency }}
+            </td>
+
+            <td>
+                {{ v.total_services_cost }}
+            </td>
+
+            <td>
+                <strong>
+                    {{ v.total_cost }}
+                </strong>
+            </td>
+
+            <td class="text-success fw-bold">
+                {{ v.suggested_sale_price }}
+            </td>
+
+            <td>
+                <a href="{% url 'dealers:vehicle_update' v.id %}"
+                   class="btn btn-sm btn-warning mb-1">
+                    Editar
+                </a>
+                <a href="{% url 'dealers:vehicle_delete' v.id %}"
+                   class="btn btn-sm btn-danger mb-1">
+                    Eliminar
+                </a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="9" class="text-center">
+                No hay vehículos cargados
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

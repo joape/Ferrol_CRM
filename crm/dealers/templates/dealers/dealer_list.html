@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dealers</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="container mt-4">
+{% extends "base.html" %}
+
+{% block title %}Automotoras{% endblock %}
+
+{% block content %}
 
 <h1>Automotoras</h1>
 
-<a href="{% url 'dealers:create' %}" class="btn btn-primary mb-3">Agregar Automotora</a>
+<a href="{% url 'dealers:create' %}" class="btn btn-primary mb-3">
+    Nueva automotora
+</a>
 
 <table class="table table-bordered">
     <thead>
@@ -38,5 +38,5 @@
     </tbody>
 </table>
 
-</body>
-</html>
+{% endblock %}
+
